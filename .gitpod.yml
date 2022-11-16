@@ -1,15 +1,9 @@
 tasks:
-  - name: Terminal 1
-    before: echo 'before script' # runs during prebuild
-    init: echo 'init script' # runs during prebuild
-    command: echo 'start script'
-  - name: Terminal 2
-    init: npm install
+  - name: Install Ionic cli
     command: npm install -g @ionic/cli
-  - name: Terminal 3
-    init: npm install
+  - name: Install angular cli
     command: npm install @angular/cli
 
 ports:
-  - port: 3000
+  - port: 4200
     onOpen: open-preview
