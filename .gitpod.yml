@@ -1,9 +1,51 @@
 tasks:
-  - name: Install Ionic cli
-    command: npm install -g @ionic/cli
-  - name: Install angular cli
-    command: npm install @angular/cli
+  - name: Install
+    init: >
+      npm install -g @angular/cli &&
+      npm install -g @ionic/cli &&
+      ionic start mobdev_ca3 blank --type=angular &&
+      gp sync-done bundle
+    command: cd mobdev_ca3
+
+  - name: IonicProject
+    init: |
+      gp sync-await bundle &&
+      cd mobdev_ca3 &&
+      gp sync-done startIonic
+    command: ionic serve
+
+  - name: capacitor
+    init: >
+      gp sync-await startIonic &&
+      cd mobdev_ca3 &&
+      npm i @capacitor/core &&
+      npm i -D @capacitor/cli &&
+      gp sync-done capa
+    command: npm i @capacitor/android
+
+  - name: building
+    init: >
+      gp sync-await capa &&
+      cd mobdev_ca3 &&
+      npm run build &&
+      gp sync-done build
+    command: npx cap sync
+
+  - name: initapp
+    init: |
+      gp sync-await build &&
+      cd mobdev_ca3 &&
+      npx cap init
+      gp sync-done appinit
+    command: npx cap add android
+
+  - name: Sync
+    init: >
+      gp sync-await appinit &&
+      cd mobdev_ca3 &&
+      npm run build
+    command: npx cap run android
 
 ports:
   - port: 4200
-    onOpen: open-preview
+    onOpen: open-browser
