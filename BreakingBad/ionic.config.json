@@ -1,0 +1,7 @@
+{
+  "name": "BreakingBad",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

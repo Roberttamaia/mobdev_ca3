@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Characters
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of charactersData">
+    <ion-avatar>
+      <img class="charactersAvatar" [src]="item.img" alt="">
+
+    </ion-avatar>
+        <ion-card-header>
+          <img class="charactersImage" [src]="item.img" alt="">
+    <h4>{{item.name}}</h4>
+        </ion-card-header>
+    <ion-card-content>
+      <p>{{item.occupation}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
