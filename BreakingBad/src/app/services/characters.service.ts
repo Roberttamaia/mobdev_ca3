@@ -22,13 +22,13 @@ export interface ApiResult {
   providedIn: 'root'
 })
 export class CharactersService {
-  limit = 10;
+  limit = 62;
   offset = 0;
 
   constructor(private http: HttpClient) {
   }
 
-  getCharacters(currentPage: number): Observable<any> {
+  getCharacters(): Observable<any> {
     return this.http.get(`${environment.baseUrl}/characters?limit=${this.limit}&offset=${this.offset}`)
   }
 }

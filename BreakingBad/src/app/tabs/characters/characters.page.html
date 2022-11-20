@@ -1,23 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
-    <ion-title>
-      Characters
-    </ion-title>
+    <ion-title>Characters</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-card *ngFor="let item of charactersData">
-    <ion-avatar>
-      <img class="charactersAvatar" [src]="item.img" alt="">
+    <img class="charactersImage" [src]="item.img" alt="">
+    <ion-card-header>
+      <ion-card-title>{{item.name}} ({{item.nickname}})</ion-card-title>
+      <p>Status: {{item.status}} </p>
+    </ion-card-header>
 
-    </ion-avatar>
-        <ion-card-header>
-          <img class="charactersImage" [src]="item.img" alt="">
-    <h4>{{item.name}}</h4>
-        </ion-card-header>
     <ion-card-content>
-      <p>{{item.occupation}}</p>
+      <ion-item-group>
+        <p slot="start">Portrayed: {{item.portrayed}} </p>
+        <p >Year of Birth: {{item.birthday | date:'y'}} </p>
+        <p>{{item.occupation}}</p>
+      </ion-item-group>
     </ion-card-content>
   </ion-card>
 </ion-content>

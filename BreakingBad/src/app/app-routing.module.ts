@@ -20,8 +20,8 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/quotes/quotes.module').then(m => m.QuotesPageModule)
   },
   {
-    path: 'death-count',
-    loadChildren: () => import('./tabs/deaths/deaths.module').then(m => m.DeathCountPageModule)
+    path: 'deaths',
+    loadChildren: () => import('./tabs/deaths/deaths.module').then(m => m.DeathsPageModule)
   },
 ];
 

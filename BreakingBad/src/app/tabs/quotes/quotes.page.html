@@ -1,9 +1,16 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>quotes</ion-title>
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Quotes
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-card *ngFor="let item of quotesData">
+    <ion-item>
+      <p slot="">{{item.author}} </p>
+    </ion-item>
+    <p class="quoteText">" {{item.quote}} " </p>
+  </ion-card>
 </ion-content>

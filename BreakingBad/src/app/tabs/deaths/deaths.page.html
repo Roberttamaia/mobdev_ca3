@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Deaths</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <p>Click to find out about a random death</p>
+    <ion-button slot="end" (click)="randomDeath()">Death!</ion-button>
+  </ion-item>
+
+  <ion-card>
+    <img [src]="randomDeathData.img" alt="">
+    <ion-card-header>
+      <ion-card-title>{{randomDeathData.death}}</ion-card-title>
+      <ion-card-subtitle> <b>Cause of death: </b> {{randomDeathData.cause}}</ion-card-subtitle>
+      <ion-card-subtitle><b>Responsible: </b> {{randomDeathData.responsible}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <b>Last words:</b> {{randomDeathData.last_words}}
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

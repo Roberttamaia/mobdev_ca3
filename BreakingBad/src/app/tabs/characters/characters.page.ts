@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CharactersService} from "../../services/characters.service";
-import {LoadingController} from "@ionic/angular";
+import {InfiniteScrollCustomEvent, LoadingController} from "@ionic/angular";
 
 @Component({
   selector: 'app-characters',
@@ -15,23 +15,22 @@ export class CharactersPage implements OnInit {
   }
 
   ngOnInit() {
-    return this.loadCharacters();
+    this.loadCharacters();
   }
 
   async loadCharacters() {
+
     const loading = await this.loadingCtrl.create({
       message: 'Loading...',
       spinner: "bubbles"
     });
     await loading.present();
 
-    this.service.getCharacters(this.currentPage).subscribe((result) => {
+    this.service.getCharacters().subscribe((result) => {
       this.loadingCtrl.dismiss();
       console.log(result);
       this.charactersData = result;
     });
 
   }
-
-
 }
