@@ -21,3 +21,10 @@ The Project uses
 
 ## This project uses Ionic 6 and Angular
 ### Setup the project locally
+* Clone the project: `git clone 'https://github.com/Roberttamaia/mobdev_ca3.git`
+
+* Navigate into the `mobdev_ca3` folder by running `cd mobdev_ca3` on the terminal
+  `npm install -g @angular/cli @ionic/cli`
+* In BreakingBad directory Run`npm install` to install the dependencies
+*  Run `ng build` 
+* Refer to the docs for the available API end points
