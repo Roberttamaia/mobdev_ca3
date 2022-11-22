@@ -26,5 +26,5 @@ The Project uses
 * Navigate into the `mobdev_ca3` folder by running `cd mobdev_ca3` on the terminal
   `npm install -g @angular/cli @ionic/cli`
 * In BreakingBad directory Run`npm install` to install the dependencies
-*  Run `ng build` 
+*  Run `ng serve` 
 * Refer to the docs for the available API end points
