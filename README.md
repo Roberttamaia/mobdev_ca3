@@ -15,15 +15,12 @@ You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with npm)
-
-The Project uses
-
-* Node:  (https://nodejs.org/download/)
-* Package Manager: npm (Node Package Manager, it comes with node.js installation)
 * Angular CLI: </br>
-    `npm install -g @angular/cli` </br>
-    `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned`
+    Install angular`npm install -g @angular/cli` </br>
+    Then `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned`
 ## This project uses Ionic 6 and Angular
+* To install Ionic `npm install -g @ionic/cli`
+* Check if Angular is installed ``ng v``
 
 ### Setup the project locally
 
