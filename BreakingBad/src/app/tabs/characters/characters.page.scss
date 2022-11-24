@@ -1,3 +1,26 @@
 .charactersImage{
   border-radius: 10px;
+  float: contour;
+  width:  760px;
+  height: 400px;
+  object-fit:cover;
+}
+.content{
+  alignment:left ;
+}
+.characterCard{
+  width:  760px;
+  height: auto;
+}
+
+/* If in mobile screen with maximum width 479px.
+The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */
+@media only screen and (max-width: 479px){
+  .characterCard{ width: 95%; }
+  .charactersImage{ width: 100%; }
+}
+
+@media screen and (max-width : 760px){
+  .characterCard{ width: 95%; }
+  .charactersImage{ width: 100%; }
 }
