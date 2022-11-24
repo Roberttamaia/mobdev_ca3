@@ -1,23 +1,25 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-title>Characters</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Characters</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content>
-  <ion-card *ngFor="let item of charactersData">
-    <img class="charactersImage" [src]="item.img" alt="">
-    <ion-card-header>
-      <ion-card-title>{{item.name}} ({{item.nickname}})</ion-card-title>
-      <p>Status: {{item.status}} </p>
-    </ion-card-header>
+  <ion-content class="content">
+    <ion-card class="characterCard" *ngFor="let item of charactersData">
+      <img class="charactersImage" [src]="item.img" alt="">
+      <ion-card-header class="card-header">
+        <ion-card-title class="character-name">{{item.name}} ({{item.nickname}})</ion-card-title>
+        <p>Status: {{item.status}} </p>
+      </ion-card-header>
 
-    <ion-card-content>
-      <ion-item-group>
-        <p slot="start">Portrayed: {{item.portrayed}} </p>
-        <p >Year of Birth: {{item.birthday | date:'y'}} </p>
-        <p>{{item.occupation}}</p>
-      </ion-item-group>
-    </ion-card-content>
-  </ion-card>
-</ion-content>
+      <ion-card-content class="character-content">
+        <ion-item-group class="characters-group">
+          <p slot="start">Portrayed: {{item.portrayed}} </p>
+          <p >Year of Birth: {{item.birthday | date:'y'}} </p>
+          <p>{{item.occupation}}</p>
+        </ion-item-group>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+
