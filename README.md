@@ -26,7 +26,7 @@ You will need the following things properly installed on your computer.
 
 * Clone the project: `git clone 'https://github.com/Roberttamaia/mobdev_ca3.git`
 
-* Navigate into the `mobdev_ca3` folder by running `cd mobdev_ca3` on the terminal
+
   `npm install -g @angular/cli @ionic/cli`
 * Then run `cd BreakingBad` to navigate to BreakingBad directory, run `npm install` to install the dependencies
 * Run `ng serve`  the project can be accesed on default port 4200
