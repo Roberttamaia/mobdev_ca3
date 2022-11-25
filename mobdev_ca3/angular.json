@@ -31,10 +31,7 @@
                 "output": "./svg"
               }
             ],
-            "styles": [
-              "src/theme/variables.scss",
-              "src/global.scss"
-            ],
+            "styles": ["src/theme/variables.scss", "src/global.scss"],
             "scripts": []
           },
           "configurations": {
@@ -83,6 +80,7 @@
               "browserTarget": "app:build:development"
             },
             "ci": {
+              "progress": false
             }
           },
           "defaultConfiguration": "development"
@@ -113,10 +111,7 @@
                 "output": "./svg"
               }
             ],
-            "styles": [
-              "src/theme/variables.scss",
-              "src/global.scss"
-            ],
+            "styles": ["src/theme/variables.scss", "src/global.scss"],
             "scripts": []
           },
           "configurations": {
@@ -141,8 +136,7 @@
   "cli": {
     "schematicCollections": [
       "@ionic/angular-toolkit"
-    ],
-    "analytics": "f38dbba3-47a1-4e6c-bddd-dc2947565f56"
+    ]
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {
